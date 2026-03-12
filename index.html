@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Checklists - Painel Gerencial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-row">
+                <div class="title-section">
+                    <h1><i class="fas fa-clipboard-check"></i> Gestão de Checklist</h1>
+                    <div class="branding-block">
+                        <div class="logo-box"><i class="fas fa-truck"></i></div>
+                        <div class="brand-text">
+                            <span class="brand-main">TECNOLOG</span>
+                            <span class="brand-sub">T.H.S CARGO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filters-bar">
+                    <!-- Filtro Avançado (Compacto) -->
+                    <div class="advanced-filters-compact">
+                        <div class="compact-group">
+                            <label>Placa:</label>
+                            <select id="plateFilter">
+                                <option value="">Todos</option>
+                            </select>
+                        </div>
+                        <div class="compact-group">
+                            <label>De:</label>
+                            <input type="datetime-local" id="startDate">
+                        </div>
+                        <div class="compact-group">
+                            <label>Até:</label>
+                            <input type="datetime-local" id="endDate">
+                            <button class="calendar-btn-small" id="applyAdvancedFilter"><i
+                                    class="fas fa-filter"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <!-- Consulta Rápida -->
+                    <div class="quick-filters-compact">
+                        <select id="monthFilter"></select>
+                        <select id="dateFilter"></select>
+                    </div>
+                </div>
+
+                <div class="last-update" id="lastUpdate">...</div>
+            </div>
+        </header>
+
+        <section class="kpi-container">
+            <div class="card kpi">
+                <div class="kpi-icon blue"><i class="fas fa-truck-loading"></i></div>
+                <div class="kpi-info">
+                    <span class="kpi-label">Manifestos</span>
+                    <span class="kpi-value" id="totalManifestos">0</span>
+                </div>
+            </div>
+            <div class="card kpi">
+                <div class="kpi-icon green"><i class="fas fa-check-circle"></i></div>
+                <div class="kpi-info">
+                    <span class="kpi-label">Checklists</span>
+                    <span class="kpi-value" id="doneChecklists">0</span>
+                </div>
+            </div>
+            <div class="card kpi">
+                <div class="kpi-icon yellow"><i class="fas fa-clock"></i></div>
+                <div class="kpi-info">
+                    <span class="kpi-label">Pendentes</span>
+                    <span class="kpi-value" id="pendingChecklists">0</span>
+                </div>
+            </div>
+            <div class="card kpi">
+                <div class="kpi-icon purple"><i class="fas fa-chart-line"></i></div>
+                <div class="kpi-info">
+                    <span class="kpi-label">Conformidade</span>
+                    <span class="kpi-value" id="complianceRate">0%</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="alert-section" id="criticalAlerts">
+            <div class="section-header">
+                <h2><i class="fas fa-exclamation-triangle"></i> Alertas Críticos - Saída Bloqueada</h2>
+            </div>
+            <div class="alert-cards" id="alertGrid">
+                <!-- Alertas injetados via JS -->
+                <div class="no-alerts">Nenhum veículo bloqueado no momento.</div>
+            </div>
+        </section>
+
+        <section class="main-content">
+            <div class="card table-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-list"></i> Detalhamento Geral</h2>
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="tableSearch" placeholder="Filtrar por placa ou motorista...">
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <table id="checklistTable">
+                        <thead>
+                            <tr>
+                                <th>Status</th>
+                                <th>Placa</th>
+                                <th>Motorista</th>
+                                <th>Manifesto</th>
+                                <th>Horário Saída</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- Dados injetados via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="dashboard_data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
