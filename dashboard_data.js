@@ -7993,7 +7993,7 @@ const DASHBOARD_DATA = {
                     "placa": "EFV6387",
                     "motorista": "WILLIAN M FEITOSA (MOT-RIO)",
                     "manifesto": "192325",
-                    "horario": "nan",
+                    "horario": "08:00:00",
                     "status": "BLOQUEADO"
                 }
             ],
@@ -8047,7 +8047,67 @@ const DASHBOARD_DATA = {
                     "status": "AUTORIZADO"
                 }
             ]
+        },
+        "2026-03-13": {
+            "stats": {
+                "total_manifestos": 7,
+                "checklists_feitos": 2,
+                "pendentes": 5,
+                "data_referencia": "13/03/2026",
+                "percentual_conformidade": 28.6
+            },
+            "pending": [
+                {
+                    "placa": "RUE1B98",
+                    "motorista": "INGRID J TAVARES (MOT-SAO)",
+                    "manifesto": "192354",
+                    "horario": "06:23:00",
+                    "status": "BLOQUEADO"
+                },
+                {
+                    "placa": "EFW6601",
+                    "motorista": "ISAIAS S FERREIRA (MOT-SAO)",
+                    "manifesto": "192357",
+                    "horario": "06:26:00",
+                    "status": "BLOQUEADO"
+                },
+                {
+                    "placa": "GGW9G47",
+                    "motorista": "ALEXANDRE C SILVA (MOT-SAO)",
+                    "manifesto": "192358",
+                    "horario": "06:27:00",
+                    "status": "BLOQUEADO"
+                },
+                {
+                    "placa": "QSQ3D59",
+                    "motorista": "MICHAEL P BARROS (MOT-SAO)",
+                    "manifesto": "192361",
+                    "horario": "06:33:00",
+                    "status": "BLOQUEADO"
+                },
+                {
+                    "placa": "BXZ3F52",
+                    "motorista": "FERNANDO R SOUSA (MOT-SAO)",
+                    "manifesto": "192364",
+                    "horario": "07:47:00",
+                    "status": "BLOQUEADO"
+                }
+            ],
+            "completed": [
+                {
+                    "placa": "RZC2C37",
+                    "motorista": "CARLOS M V LOPES (MOT-MAO)",
+                    "manifesto": "192343",
+                    "status": "AUTORIZADO"
+                },
+                {
+                    "placa": "ELY9J91",
+                    "motorista": "RAIMUNDO VALENTIM (MOTORISTA -",
+                    "manifesto": "192356",
+                    "status": "AUTORIZADO"
+                }
+            ]
         }
     },
-    "last_update": "12/03/2026 10:36:17"
+    "last_update": "13/03/2026 08:34:01"
 };
